@@ -1,5 +1,9 @@
 %define         git_commit c5920e0
 
+%define major 0
+%define libname %mklibname mm-qt %{major}
+%define devname %mklibname -d mm-qt
+
 Name:           libmm-qt
 Version:        0.6.0
 Release:        2.20130613git%{git_commit}%{?dist}
@@ -21,12 +25,19 @@ Requires:  ModemManager >= 0.6.0
 %description
 Qt library for ModemManager
 
-%package devel
+%package -n %{libname}
+Summary:        Qt-only wrapper for ModemManager DBus API
+Group:          System/Libraries
+
+%description -n %{libname}
+Qt library for ModemManager
+
+%package -n %{devname}
 Summary: Development files for %{name}
 Group:   Development/C++
 Requires: %{name} = %{version}-%{release}
 
-%description devel
+%description -n %{devname}
 Qt libraries and header files for developing applications that use ModemManager
 
 %prep
@@ -39,12 +50,12 @@ Qt libraries and header files for developing applications that use ModemManager
 %install
 make install/fast  DESTDIR=%{buildroot} -C build
 
-%files
+%files -n %{libname}
 %doc README
 %{_libdir}/libModemManagerQt.so.0*
 
 
-%files devel
+%files -n %{devname}
 %{_libdir}/pkgconfig/ModemManagerQt.pc
 %{_includedir}/ModemManagerQt/
 %{_libdir}/libModemManagerQt.so
