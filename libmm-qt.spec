@@ -35,7 +35,7 @@ Qt library for ModemManager
 %package -n %{devname}
 Summary: Development files for %{name}
 Group:   Development/C++
-Requires: %{name} = %{version}-%{release}
+Requires: %{libname} = %{version}-%{release}
 
 %description -n %{devname}
 Qt libraries and header files for developing applications that use ModemManager
