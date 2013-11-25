@@ -5,7 +5,7 @@
 Summary:	Qt-only wrapper for ModemManager DBus API
 Name:		libmm-qt
 Version:	1.0.0
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPLv2+
 Group:		System/Libraries
@@ -39,6 +39,7 @@ Qt library for ModemManager.
 Summary:	Development files for %{name}
 Group:		Development/C++
 Requires:	%{libname} = %{EVRD}
+Requires:	pkgconfig(ModemManager)
 Conflicts:	%{_lib}mm-qt-devel < 1:0.5.0
 Obsoletes:	%{_lib}mm-qt-devel < 1:0.5.0
 
