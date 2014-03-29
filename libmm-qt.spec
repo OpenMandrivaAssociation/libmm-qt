@@ -4,13 +4,13 @@
 
 Summary:	Qt-only wrapper for ModemManager DBus API
 Name:		libmm-qt
-Version:	1.0.0
-Release:	2
+Version:	1.0.1
+Release:	1
 Epoch:		1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://projects.kde.org/projects/extragear/libs/libmm-qt
-Source0:	ftp://ftp.kde.org/pub/kde/unstable/modemmanager-qt/1.0.0/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/unstable/modemmanager-qt/1.0.0/src/%{name}-%{version}-1.tar.xz
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(ModemManager)
 BuildRequires:	pkgconfig(QtCore)
