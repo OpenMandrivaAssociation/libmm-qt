@@ -1,3 +1,6 @@
+%define _enable_debug_packages %{nil}
+%define debug_package %{nil}
+
 %define major 0
 %define libname %mklibname ModemManagerQt %{major}
 %define devname %mklibname -d ModemManagerQt
