@@ -8,7 +8,7 @@
 Summary:	Qt-only wrapper for ModemManager DBus API
 Name:		libmm-qt
 Version:	1.0.1
-Release:	4
+Release:	5
 Epoch:		1
 License:	LGPLv2+
 Group:		System/Libraries
